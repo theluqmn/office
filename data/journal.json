@@ -2,7 +2,7 @@
     "journals": [
         {
             "Title": "Testing Journal",
-            "Description": "",
+            "Description": "No description",
             "Date": "25th August 2026",
             "URL": "/journal/2026-08-25"
         }

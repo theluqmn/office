@@ -1,0 +1,23 @@
+{{define "journal"}}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{template "head" .}}
+    </head>
+
+    <body id="journal"
+    class="p-2 flex flex-col gap-12 scanlines vignette-glow bg-[rgb(18,14,8)] font-mono min-h-screen">
+        {{template "header" .}}
+
+        <main class="w-3/5 flex flex-col gap-4 mx-auto text-amber flex-1">
+            <h1 class="font-bold text-2xl">Journal</h1>
+
+            {{range .Entries}}
+            <a href="{{.URL}}">({{.Date}}) {{.Title}} - {{.Description}} </a>
+            {{end}}
+        </main>
+
+        {{template "footer" .}}
+    </body>
+</html>
+{{end}}

@@ -80,18 +80,18 @@ func (p *Parser) ConvertMarkdown(filePath string) (template.HTML, map[string]any
 	return template.HTML(buffer.String()), metaData, nil
 }
 
-type JournalHandler struct {
+type JournalEntryHandler struct {
 	parser *Parser
 }
 
-func NewJournalHandler() *JournalHandler {
-	return &JournalHandler{
+func NewJournalEntryHandler() *JournalEntryHandler {
+	return &JournalEntryHandler{
 		parser: NewGMParser(),
 	}
 }
 
 // reads markdown files and indexes it inside data.json
-func (h *JournalHandler) IndexJournals(journalDir string, jsonPath string) error {
+func (h *JournalEntryHandler) IndexJournals(journalDir string, jsonPath string) error {
 	files, err := os.ReadDir(journalDir)
 	if err != nil {
 		return fmt.Errorf("failed to read journal directory: %w", err)
@@ -133,7 +133,7 @@ func (h *JournalHandler) IndexJournals(journalDir string, jsonPath string) error
 }
 
 // handles converting markdown to HTML
-func (h *JournalHandler) ConvertMarkdownHandler(c echo.Context) error {
+func (h *JournalEntryHandler) JournalEntries(c echo.Context) error {
 	slug := c.Param("slug")
 	cleanSlug := filepath.Clean(slug)
 
