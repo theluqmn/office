@@ -28,8 +28,6 @@ func (h *JournalHandler) JournalIndex(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, "failed to parse journal data")
 	}
 
-	fmt.Println(data.Journals)
-
 	return c.Render(http.StatusOK, "journal-index", map[string]any{
 		"Title":       "Journal",
 		"Description": "Luqman's online journal",
