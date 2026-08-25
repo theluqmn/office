@@ -7,8 +7,7 @@ following functions:
 
 1. Serves my portfolio website
 2. Compiles and serves my journals
-3. Redirects from my URL shorteners
-4. Hosts various online tools
+3. Redirects from my [URL shorteners](#url-shorteners)
 
 ## Technicality
 
@@ -22,6 +21,19 @@ as the database.
 Additional libraries:
 
 - [Air](https://github.com/air-verse/air): Live reload
+
+### URL Shorteners
+
+Below is a table of the URL shorteners I added to the Office:
+
+|Website|Shortener|
+|---|---|
+|GitHub|/gh|
+|X (Twitter)|/x|
+|Instagram|/ig|
+|YouTube|/yt|
+|Discord|/dc|
+|Hackatime|/ht|
 
 ## Notes
 
