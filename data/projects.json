@@ -1,0 +1,15 @@
+{
+    "projects": [
+        {
+            "Name": "DOOS",
+            "Description": "A to-do list management software written in GnuCOBOL",
+			"URL": "https://github.com/theluqmn/doos"
+        },
+        {
+            "Name": "Whouse",
+            "Description": "An inventory management system built using Go.",
+            "URL": "https://github.com/theluqmn/whouse"
+        }
+    ],
+    "journals": []
+}

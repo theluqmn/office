@@ -9,12 +9,13 @@ func RegisterRoutes(e *echo.Echo) {
 	// getting handlers
 	homeHandler := handlers.NewHomeHandler()
 	projectHandler := handlers.NewProjectsHandler()
+	journalHandler := handlers.NewJournalHandler()
 
 	// serving routes
 	e.Static("/static", "static")
 	e.GET("/", homeHandler.Home)
 	e.GET("/projects", projectHandler.Projects)
-	e.GET("/journal/:slug", handlers.ConvertMarkdownHandler)
+	e.GET("/journal/:slug", journalHandler.ConvertMarkdownHandler)
 
 	// shortener routes
 	e.GET("/gh", LinkGitHub)

@@ -6,36 +6,35 @@
     </div>
     
     <div class="flex flex-row justify-between text-sm text-center">
-        <div class="flex flex-row gap-4">
-            <a href="/" class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
+        <div class="flex flex-row gap-4 text-amber">
+            <a href="/"
+            class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
                 <p id="nav-home-key" class="bg-amber-solid text-black w-4 h-4 leading-4">1</p>
-                <p id="nav-home-text" class="text-amber">Home</p>
+                <p id="nav-home-text">Home</p>
             </a>
 
-            <a href="/projects" class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
+            <a href="/projects"
+            class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
                 <p id="nav-projects-key" class="bg-amber-solid text-black w-4 h-4 leading-4">2</p>
-                <p id="nav-projects-text" class="text-amber">Projects</p>
+                <p id="nav-projects-text">Projects</p>
             </a>
 
-            <a href="/" class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
+            <a href="/journal"
+            class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
                 <p id="nav-journal-key" class="bg-amber-solid text-black w-4 h-4 leading-4">3</p>
-                <p id="nav-journal-text" class="text-amber">Journal</p>
-            </a>
-
-            <a href="/" class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
-                <p id="nav-sitemap-key" class="bg-amber-solid text-black w-4 h-4 leading-4">4</p>
-                <p id="nav-sitemap-text" class="text-amber">Sitemap</p>
+                <p id="nav-journal-text">Journal</p>
             </a>
         </div>
 
-        <a href="/" class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
-            <p id="nav-settings-key" class="bg-amber-solid text-black w-4 h-4 leading-4">0</p>
-            <p id="nav-settings-text" class="text-amber">Settings</p>
+        <a href="https://github.com/theluqmn/office"
+        class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
+            <p id="nav-repo-key" class="bg-amber-solid text-black w-4 h-4 leading-4">0</p>
+            <p id="nav-repo-text" class="text-amber">GitHub Repository</p>
         </a>
     </div>
 
     {{template "split" .}}
 
-    <script src="static/js/header.js"></script>
+    <script src="/static/js/header.js"></script>
 </header>
 {{end}}

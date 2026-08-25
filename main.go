@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"main/routes"
+	"main/handlers"
 	"github.com/labstack/echo/v4"
 )
 
@@ -18,8 +19,12 @@ func (t *Template) Render(w io.Writer, name string, data any, c echo.Context) er
 
 func main() {
 	fmt.Println("Gello world!")
-
+	journalHandler := handlers.NewJournalHandler()
 	renderer := &Template{ templates: template.Must(template.ParseFS(os.DirFS("views"), "*.html", "*/*.html")) }
+
+	// index journals
+	err := journalHandler.IndexJournals("./journal", "./data/journal.json")
+	if err != nil { fmt.Println(err) }
 
 	// echo instance config
 	e := echo.New()
