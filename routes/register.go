@@ -14,4 +14,12 @@ func RegisterRoutes(e *echo.Echo) {
 	e.Static("/static", "static")
 	e.GET("/", homeHandler.Home)
 	e.GET("/projects", projectHandler.Projects)
+
+	// shortener routes
+	e.GET("/gh", LinkGitHub)
+	e.GET("/x", LinkTwitter)
+	e.GET("/ig", LinkInstagram)
+	e.GET("/yt", LinkYouTube)
+	e.GET("/dc", LinkDiscord)
+	e.GET("/ht", LinkHackatime)
 }
