@@ -49,14 +49,10 @@ func NewGMParser() *Parser {
 // extract front matter data
 func (p *Parser) ExtractMeta(filePath string) (map[string]any, error) {
 	content, err := os.ReadFile(filePath)
-	if err != nil {
-		return nil, err
-	}
+	if err != nil { return nil, err }
 
 	context := parser.NewContext()
-	if err := p.gm.Convert(content, &bytes.Buffer{}, parser.WithContext(context)); err != nil {
-		return nil, err
-	}
+	if err := p.gm.Convert(content, &bytes.Buffer{}, parser.WithContext(context)); err != nil { return nil, err }
 
 	return meta.Get(context), nil
 }
@@ -64,31 +60,19 @@ func (p *Parser) ExtractMeta(filePath string) (map[string]any, error) {
 // converts file content to HTML and returns metadata
 func (p *Parser) ConvertMarkdown(filePath string) (template.HTML, map[string]any, error) {
 	content, err := os.ReadFile(filePath)
-	if err != nil {
-		return "", nil, err
-	}
+	if err != nil { return "", nil, err }
 
 	context := parser.NewContext()
 	var buffer bytes.Buffer
-
-	if err := p.gm.Convert(content, &buffer, parser.WithContext(context)); err != nil {
-		return "", nil, err
-	}
+	if err := p.gm.Convert(content, &buffer, parser.WithContext(context)); err != nil { return "", nil, err }
 
 	metaData := meta.Get(context)
 
 	return template.HTML(buffer.String()), metaData, nil
 }
 
-type JournalEntryHandler struct {
-	parser *Parser
-}
-
-func NewJournalEntryHandler() *JournalEntryHandler {
-	return &JournalEntryHandler{
-		parser: NewGMParser(),
-	}
-}
+type JournalEntryHandler struct { parser *Parser }
+func NewJournalEntryHandler() *JournalEntryHandler { return &JournalEntryHandler{ parser: NewGMParser() } }
 
 // reads markdown files and indexes it inside data.json
 func (h *JournalEntryHandler) IndexJournals(journalDir string, jsonPath string) error {
@@ -132,7 +116,7 @@ func (h *JournalEntryHandler) IndexJournals(journalDir string, jsonPath string) 
 	return os.WriteFile(jsonPath, output, 0644)
 }
 
-// handles converting markdown to HTML
+// serving the journal entries
 func (h *JournalEntryHandler) JournalEntries(c echo.Context) error {
 	slug := c.Param("slug")
 	cleanSlug := filepath.Clean(slug)
@@ -150,7 +134,7 @@ func (h *JournalEntryHandler) JournalEntries(c echo.Context) error {
 	description, _ := metaData["description"].(string)
 	if description == "" { description = "No description was provided" }
 
-	return c.Render(http.StatusOK, "journal-template", map[string]any{
+	return c.Render(http.StatusOK, "journal-entry", map[string]any{
 		"Title":       title,
 		"Description": description,
 		"Content":     contentHTML,

@@ -19,10 +19,7 @@ type ProjectsData struct {
 }
 
 type ProjectsHandler struct{}
-
-func NewProjectsHandler() *ProjectsHandler {
-	return &ProjectsHandler{}
-}
+func NewProjectsHandler() *ProjectsHandler { return &ProjectsHandler{} }
 
 // handles rendering of the /projects page
 func (h *ProjectsHandler) Projects(c echo.Context) error {

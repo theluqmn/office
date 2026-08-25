@@ -14,13 +14,10 @@ type JournalData struct {
 }
 
 type JournalHandler struct{}
-
-func NewJournalHandler() *JournalHandler {
-	return &JournalHandler{}
-}
+func NewJournalHandler() *JournalHandler { return &JournalHandler{} }
 
 // handles rendering of the /journal page
-func (h *JournalHandler) Journal(c echo.Context) error {
+func (h *JournalHandler) JournalIndex(c echo.Context) error {
 	fileData, err := os.ReadFile("./data/journal.json")
 	if err != nil {
 		return c.String(http.StatusInternalServerError, "failed to read journal file")
@@ -33,7 +30,7 @@ func (h *JournalHandler) Journal(c echo.Context) error {
 
 	fmt.Println(data.Journals)
 
-	return c.Render(http.StatusOK, "journal", map[string]any{
+	return c.Render(http.StatusOK, "journal-index", map[string]any{
 		"Title":       "Journal",
 		"Description": "Luqman's online journal",
 		"Entries":    data.Journals,

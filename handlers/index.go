@@ -6,10 +6,7 @@ import (
 )
 
 type HomeHandler struct {}
-
-func NewHomeHandler() *HomeHandler {
-	return &HomeHandler{}
-}
+func NewHomeHandler() *HomeHandler { return &HomeHandler{} }
 
 // handles rendering of the root page (home)
 func (h *HomeHandler) Home(c echo.Context) error {
