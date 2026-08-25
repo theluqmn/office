@@ -8,7 +8,7 @@
     <body class="p-2 flex flex-col gap-12 scanlines vignette-glow bg-[rgb(18,14,8)] font-mono min-h-screen">
         {{template "header" .}}
 
-        <main class="w-3/5 flex flex-col gap-4 mx-auto text-amber">
+        <main class="w-3/5 flex flex-col gap-4 mx-auto text-amber flex-1">
             <div class="pb-12 flex flex-col gap-2">
                 <p class="font-semibold">
                 "And whoever is mindful of God, He will make a way out for them, and provide for them from sources
@@ -60,22 +60,28 @@
                         <tr>
                             <td class="font-bold w-1/4 align-top">Links</td>
                             <td>
-                                <a href="https://github.com/theluqmn" target="_blank" class="underline">GitHub</a>,
-                                <a href="https://x.com/theluqmn" target="_blank" class="underline">X (Twitter)</a>,
-                                <a href="https://instagram.com/theluqmn" target="_blank" class="underline">Instagram</a>,
-                                <a href="https://youtube.com/@theluqmn" target="_blank" class="underline">YouTube</a>,
-                                <a href="https://discord.gg/TxWpjjMed6" target="_blank" class="underline">Discord</a>,
-                                <a href="https://hackatime.hackclub.com/@theluqmn" target="_blank" class="underline">Hackatime</a>
+                                <a href="https://github.com/theluqmn" target="_blank"
+                                class="underline hover:bg-[rgba(71,85,105,0.2)] duration-300">GitHub</a>,
+                                <a href="https://x.com/theluqmn" target="_blank"
+                                class="underline hover:bg-[rgba(71,85,105,0.2)] duration-300">X (Twitter)</a>,
+                                <a href="https://instagram.com/theluqmn" target="_blank"
+                                class="underline hover:bg-[rgba(71,85,105,0.2)] duration-300">Instagram</a>,
+                                <a href="https://youtube.com/@theluqmn" target="_blank"
+                                class="underline hover:bg-[rgba(71,85,105,0.2)] duration-300">YouTube</a>,
+                                <a href="https://discord.gg/TxWpjjMed6" target="_blank"
+                                class="underline hover:bg-[rgba(71,85,105,0.2)] duration-300">Discord</a>,
+                                <a href="https://hackatime.hackclub.com/@theluqmn" target="_blank"
+                                class="underline hover:bg-[rgba(71,85,105,0.2)] duration-300">Hackatime</a>
                             </td>
                         </tr>
                     </table>
                 </div>
 
-                <div class="w-1/2 flex flex-col gap-2">
-                    <canvas></canvas>
-                </div>
+                <canvas id="index_game" class="w-1/2 aspect-square"></canvas>
             </div>
         </main>
+
+        {{template "footer" .}}
     </body>
 </html>
 {{end}}
