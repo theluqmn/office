@@ -1,4 +1,5 @@
-const currentPath = window.location.pathname;
+const currentPage = document.body.id;
+const activeNav = document.getElementById(`nav-${currentPage}-text`);
 
 const navHomeKey = document.getElementById('nav-home-key');
 const navProjectsKey = document.getElementById('nav-projects-key');
@@ -10,9 +11,8 @@ const navProjectsText = document.getElementById('nav-projects-text');
 const navJournalText = document.getElementById('nav-journal-text');
 const navSitemapText = document.getElementById('nav-sitemap-text');
 
-switch (currentPath) {
-    case '/': navHomeText.classList.add('underline'); break
-    case '/projects': navProjectsText.classList.add('underline'); break
+if (activeNav) {
+    activeNav.classList.add('underline');
 }
 
 document.addEventListener('keydown', (event) => {

@@ -1,6 +1,6 @@
 # Office
 
-![Hackatime Badge](https://hackatime.hackclub.com/api/v1/badge/U082SDZLULQ/theluqmn/office)
+![Hackatime Time](https://hackatime.hackclub.com/api/v1/badge/U082SDZLULQ/theluqmn/office)
 
 The Office is my webserver that acts as my office in the internet. It serves the
 following functions:
