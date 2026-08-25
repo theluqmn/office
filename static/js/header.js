@@ -21,19 +21,19 @@ document.addEventListener('keydown', (event) => {
     if (targetTag === 'input' || targetTag === 'textarea') return;
 
     switch (event.key) {
-        case '1': navHomeKey.classList.add('bg-[rgba(255,176,0,0.6)]', 'scale-95'); break;
-        case '2': navJournalKey.classList.add('bg-[rgba(255,176,0,0.6)]', 'scale-95'); break;
-        case '3': navToolsKey.classList.add('bg-[rgba(255,176,0,0.6)]', 'scale-95'); break;
-        case '4': navSitemapKey.classList.add('bg-[rgba(255,176,0,0.6)]', 'scale-95'); break;
+        case '1': navHomeKey.classList.add('bg-[rgba(255,176,0,0.6)]'); break;
+        case '2': navJournalKey.classList.add('bg-[rgba(255,176,0,0.6)]'); break;
+        case '3': navToolsKey.classList.add('bg-[rgba(255,176,0,0.6)]'); break;
+        case '4': navSitemapKey.classList.add('bg-[rgba(255,176,0,0.6)]'); break;
     }
 })
 
 document.addEventListener('keyup', (event) => {
     if (event.repeat) return;
     switch (event.key) {
-        case '1': navHomeKey.classList.remove('bg-[rgba(255,176,0,0.6)]', 'scale-95'); window.location.href = '/'; break;
-        case '2': navJournalKey.classList.remove('bg-[rgba(255,176,0,0.6)]', 'scale-95'); window.location.href = '/'; break;
-        case '3': navToolsKey.classList.remove('bg-[rgba(255,176,0,0.6)]', 'scale-95'); window.location.href = '/'; break;
-        case '4': navSitemapKey.classList.remove('bg-[rgba(255,176,0,0.6)]', 'scale-95'); window.location.href = '/'; break;
+        case '1': navHomeKey.classList.remove('bg-[rgba(255,176,0,0.6)]'); window.location.href = '/'; break;
+        case '2': navJournalKey.classList.remove('bg-[rgba(255,176,0,0.6)]'); window.location.href = '/'; break;
+        case '3': navToolsKey.classList.remove('bg-[rgba(255,176,0,0.6)]'); window.location.href = '/'; break;
+        case '4': navSitemapKey.classList.remove('bg-[rgba(255,176,0,0.6)]'); window.location.href = '/'; break;
     }
 });
