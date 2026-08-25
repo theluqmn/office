@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"html/template"
 	"io"
+	"os"
 
 	"main/routes"
 	"github.com/labstack/echo/v4"
@@ -18,7 +19,7 @@ func (t *Template) Render(w io.Writer, name string, data any, c echo.Context) er
 func main() {
 	fmt.Println("Gello world!")
 
-	renderer := &Template{ templates: template.Must(template.ParseGlob("views/*.html")) }
+	renderer := &Template{ templates: template.Must(template.ParseFS(os.DirFS("views"), "*.html", "*/*.html")) }
 
 	// echo instance config
 	e := echo.New()

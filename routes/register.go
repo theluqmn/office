@@ -14,6 +14,7 @@ func RegisterRoutes(e *echo.Echo) {
 	e.Static("/static", "static")
 	e.GET("/", homeHandler.Home)
 	e.GET("/projects", projectHandler.Projects)
+	e.GET("/journal/:slug", handlers.ConvertMarkdownHandler)
 
 	// shortener routes
 	e.GET("/gh", LinkGitHub)
