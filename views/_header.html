@@ -1,5 +1,5 @@
 {{define "header"}}
-<header class="w-7/12 mx-auto flex flex-col gap-1">
+<header class="w-3/5 mx-auto flex flex-col gap-1">
     <div class="flex flex-row justify-between">
         <p class="text-amber font-bold">Luqman's Office</p>
         <p class="text-amber text-right">@theluqmn</p>
@@ -33,6 +33,8 @@
             <p id="nav-settings-text" class="text-amber">Settings</p>
         </a>
     </div>
+
+    {{template "split" .}}
 
     <script src="static/js/header.js"></script>
 </header>
