@@ -77,11 +77,17 @@
                     </table>
                 </div>
 
-                <canvas id="index_game" class="w-1/2 aspect-square"></canvas>
+                <div class="w-1/2 flex flex-col gap-2">
+                    <canvas id="index-game" class="w-full aspect-square border-amber"></canvas>
+
+                    <p class="text-sm">Above is a game made using HTML canvas. Enjoy!</p>
+                </div>
             </div>
         </main>
 
         {{template "footer" .}}
+
+        <script src="static/js/index-game.js"></script>
     </body>
 </html>
 {{end}}
