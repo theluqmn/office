@@ -1,3 +1,37 @@
 {{define "header"}}
-<header class="w-full"></header>
+<header class="w-7/12 mx-auto flex flex-col gap-1">
+    <div class="flex flex-row justify-between">
+        <p class="text-amber font-bold">Luqman's Office</p>
+        <p class="text-dim font-bold text-right">@theluqmn</p>
+    </div>
+    
+    <div class="flex flex-row justify-between text-sm text-center">
+        <div class="flex flex-row gap-4">
+            <a href="/" class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
+                <p id="nav-home-key" class="bg-amber-solid text-black w-4 h-4 leading-4">1</p>
+                <p id="nav-home-text" class="text-amber">Home</p>
+            </a>
+
+            <a href="/" class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
+                <p id="nav-journal-key" class="bg-amber-solid text-black w-4 h-4 leading-4">2</p>
+                <p id="nav-journal-text" class="text-amber">Journal</p>
+            </a>
+
+            <a href="/" class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
+                <p id="nav-tools-key" class="bg-amber-solid text-black w-4 h-4 leading-4">3</p>
+                <p id="nav-tools-text" class="text-amber">Tools</p>
+            </a>
+
+            <a href="/" class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
+                <p id="nav-sitemap-key" class="bg-amber-solid text-black w-4 h-4 leading-4">4</p>
+                <p id="nav-sitemap-text" class="text-amber">Sitemap</p>
+            </a>
+        </div>
+
+        <a href="/" class="flex flex-row gap-2 items-center hover:bg-[rgba(71,85,105,0.2)] duration-300">
+            <p id="nav-settings-key" class="bg-amber-solid text-black w-4 h-4 leading-4">0</p>
+            <p id="nav-settings-text" class="text-amber">Settings</p>
+        </a>
+    </div>
+</header>
 {{end}}
