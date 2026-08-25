@@ -3,7 +3,7 @@ package main
 import (
 	"fmt";
 
-	"io";
+	"io"; "net/http"
 	"html/template"
 	"github.com/labstack/echo/v4"
 )
@@ -27,6 +27,11 @@ func main() {
 
 	// serving routes
 	e.Static("/static", "static")
+	e.GET("/", func (c echo.Context) error {
+		return c.Render(http.StatusOK, "index", map[string]any{
+			"Title": "Home",
+		})
+	})
 	
 	fmt.Println("Now online")
 	e.Logger.Fatal(e.Start(":8080"))
