@@ -5,11 +5,11 @@
         {{template "head" .}}
     </head>
 
-    <body class="p-2 flex flex-col gap-8 scanlines vignette-glow bg-[rgb(18,14,8)] font-mono min-h-screen">
+    <body class="p-2 flex flex-col gap-12 scanlines vignette-glow bg-[rgb(18,14,8)] font-mono min-h-screen">
         {{template "header" .}}
 
-        <main class="w-3/5 mx-auto text-amber">
-            <div class="pb-8 flex flex-col gap-2">
+        <main class="w-3/5 flex flex-col gap-4 mx-auto text-amber">
+            <div class="pb-12 flex flex-col gap-2">
                 <p class="font-semibold">
                 "And whoever is mindful of God, He will make a way out for them, and provide for them from sources
                 they could never imagine. And whoever puts their trust in God, then He alone is sufficient for them.
@@ -20,7 +20,61 @@
                 </a>
             </div>
 
-            <div class="flex flex-row gap-4"></div>
+            <div class="w-full flex flex-row gap-4">
+                <div class="w-1/2 flex flex-col gap-4">
+                    <h1 class="font-bold text-2xl">About</h1>
+                
+                    <p>
+                        I'm a relentless hardcore polymath who enjoys sparking change and doing wildly crazy things.
+                        Coding is something I take seriously, alongside consultation on business development, economic
+                        strategies, and discussions on politics. I enjoy reading books.<br><br>
+                        Moreover, I'm also happy for a chat!
+                    </p>
+
+                    <table class="w-full flex flex-col gap-2">
+                        <tr>
+                            <td class="font-bold w-1/4 align-top">Name</td>
+                            <td>Luqmanul Hakim (Luqman)</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="font-bold w-1/4 align-top">Based In</td>
+                            <td>Kuala Lumpur, Malaysia</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="font-bold w-1/4 align-top">Occupations</td>
+                            <td class="flex flex-col gap-1">
+                                <p>Student/Prefect at SMK BUD (4)</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="font-bold w-1/4 align-top">Positions</td>
+                            <td class="flex flex-col gap-1">
+                                <p>Chairman, SMK BUD (4) Computer Club</p>
+                                <p>Founder, ASEAN Scratchers</p>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="font-bold w-1/4 align-top">Links</td>
+                            <td>
+                                <a href="https://github.com/theluqmn" target="_blank" class="underline">GitHub</a>,
+                                <a href="https://x.com/theluqmn" target="_blank" class="underline">X (Twitter)</a>,
+                                <a href="https://instagram.com/theluqmn" target="_blank" class="underline">Instagram</a>,
+                                <a href="https://youtube.com/@theluqmn" target="_blank" class="underline">YouTube</a>,
+                                <a href="https://discord.gg/TxWpjjMed6" target="_blank" class="underline">Discord</a>,
+                                <a href="https://hackatime.hackclub.com/@theluqmn" target="_blank" class="underline">Hackatime</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="w-1/2 flex flex-col gap-2">
+                    <canvas></canvas>
+                </div>
+            </div>
         </main>
     </body>
 </html>
