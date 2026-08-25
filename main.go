@@ -28,8 +28,16 @@ func main() {
 	// serving routes
 	e.Static("/static", "static")
 	e.GET("/", func (c echo.Context) error {
+		fmt.Println("GET /")
 		return c.Render(http.StatusOK, "index", map[string]any{
 			"Title": "Home",
+		})
+	})
+	
+	e.GET("/projects", func (c echo.Context) error {
+		fmt.Println("GET /")
+		return c.Render(http.StatusOK, "projects", map[string]any{
+			"Title": "Projects",
 		})
 	})
 	

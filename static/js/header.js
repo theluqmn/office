@@ -12,6 +12,7 @@ const navSitemapText = document.getElementById('nav-sitemap-text');
 
 switch (currentPath) {
     case '/': navHomeText.classList.add('underline'); break
+    case '/projects': navProjectsText.classList.add('underline'); break
 }
 
 document.addEventListener('keydown', (event) => {
@@ -31,7 +32,7 @@ document.addEventListener('keyup', (event) => {
     if (event.repeat) return;
     switch (event.key) {
         case '1': navHomeKey.classList.remove('bg-[rgba(255,176,0,0.6)]'); window.location.href = '/'; break;
-        case '2': navProjectsKey.classList.remove('bg-[rgba(255,176,0,0.6)]'); window.location.href = '/'; break;
+        case '2': navProjectsKey.classList.remove('bg-[rgba(255,176,0,0.6)]'); window.location.href = '/projects'; break;
         case '3': navJournalKey.classList.remove('bg-[rgba(255,176,0,0.6)]'); window.location.href = '/'; break;
         case '4': navSitemapKey.classList.remove('bg-[rgba(255,176,0,0.6)]'); window.location.href = '/'; break;
     }
