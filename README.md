@@ -1,6 +1,7 @@
 # Office
 
 ![Hackatime Time](https://hackatime.hackclub.com/api/v1/badge/U082SDZLULQ/theluqmn/office)
+| [Website](https://theluqmn.hackclub.app)
 
 The Office is my webserver that acts as my office in the internet. It serves the
 following functions:
@@ -14,8 +15,8 @@ following functions:
 - **Frontend**: Built using HTML, styled using
 [Tailwind CSS](https://tailwindcss.com/), and front-end processing using JavaScript.
 - **Backend**: Written primarily with [Go](https://go.dev/), using the
-[Echo](https://echo.labstack.com/) library, and [SQLite](https://sqlite.org/)
-as the database.
+[Echo](https://echo.labstack.com/) library. Also contains [Goldmark](https://github.com/yuin/goldmark)
+for parsing Markdown files.
 - **Deployment**: [HackClub Nest](https://hackclub.app), 2 cores 2GB container.
 
 Additional libraries:

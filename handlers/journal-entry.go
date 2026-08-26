@@ -124,7 +124,7 @@ func (h *JournalEntryHandler) JournalEntries(c echo.Context) error {
 
 	if strings.Contains(cleanSlug, "..") { return c.String(http.StatusBadRequest, "invalid path") }
 
-	filePath := filepath.Join("./journal", cleanSlug+".md")
+	filePath := filepath.Join("../journal/entries", cleanSlug+".md")
 
 	contentHTML, metaData, err := h.parser.ConvertMarkdown(filePath)
 	if err != nil { return c.String(http.StatusNotFound, "journal entry not found") }

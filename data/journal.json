@@ -1,10 +1,10 @@
 {
     "journals": [
         {
-            "Title": "Testing Journal",
-            "Description": "",
+            "Title": "The Office",
+            "Description": "The software and technology behind my office",
             "Date": "25th August 2026",
-            "URL": "/journal/2026-08-25"
+            "URL": "/journal/the-office"
         }
     ]
 }

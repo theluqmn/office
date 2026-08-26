@@ -6,7 +6,6 @@ import (
 	"io"
 	"os"
 	"log"
-
 	"main/routes"
 	"main/handlers"
 	"github.com/labstack/echo/v4"
@@ -25,7 +24,7 @@ func main() {
 	renderer := &Template{ templates: template.Must(template.ParseFS(os.DirFS("views"), "*.html", "*/*.html")) }
 
 	// index journals
-	err := journalEntryHandler.IndexJournals("./journal", "./data/journal.json")
+	err := journalEntryHandler.IndexJournals("../journal/entries", "./data/journal.json")
 	if err != nil { log.Printf("failed to index journals: %v", err) }
 
 	// echo instance config
