@@ -9,9 +9,9 @@
     class="p-2 flex flex-col gap-12 scanlines vignette-glow bg-[rgb(18,14,8)] font-mono min-h-screen">
         {{template "header" .}}
 
-        <main class="w-3/5 flex flex-col gap-4 mx-auto text-amber flex-1">
+        <main class="w-full md:w-3/5 flex flex-col gap-4 mx-auto text-amber flex-1 text-sm md:text-base">
             <div class="pb-12 flex flex-col gap-2">
-                <p class="font-semibold">
+                <p class="font-semibold text-base">
                 "Your work is going to fill a large part of your life, and the only way to be truly
                 satisfied is to do what you believe is great work."
                 </p>
@@ -22,9 +22,9 @@
 
             <h1 class="font-bold text-2xl">Projects</h1>
 
-            <canvas id="index-game" class="w-full aspect-[12/1] border-amber"></canvas>
+            <canvas id="index-game" class="hidden md:flex w-full aspect-[12/1] border-amber"></canvas>
 
-            <div class="grid grid-cols grid-cols-2 gap-4">
+            <div class="grid grid-cols grid-cols-1 md:grid-cols-2 gap-4">
                 {{range .Projects}}
                 <div class="p-2 flex flex-col gap-2 bg-amber border-amber">
                     <p class="font-semibold text-xl">{{.Name}}</p>

@@ -9,9 +9,9 @@
     class="p-2 flex flex-col gap-12 scanlines vignette-glow bg-[rgb(18,14,8)] font-mono min-h-screen">
         {{template "header" .}}
 
-        <main class="w-3/5 flex flex-col gap-4 mx-auto text-amber flex-1">
+        <main class="w-full md:w-3/5 flex flex-col gap-4 mx-auto text-amber flex-1 tetx-sm md:text-base">
             <div class="pb-12 flex flex-col gap-2">
-                <p class="font-semibold">
+                <p class="font-semibold text-base">
                 "And whoever is mindful of God, He will make a way out for them, and provide for them from sources
                 they could never imagine. And whoever puts their trust in God, then He alone is sufficient for them.
                 Certainly God achieves His Will. God has already set a destiny for everything."
@@ -22,8 +22,8 @@
                 </a>
             </div>
 
-            <div class="w-full flex flex-row gap-4">
-                <div class="w-1/2 flex flex-col gap-4">
+            <div class="w-full flex flex-col gap-8 md:flex-row md:gap-4">
+                <div class="w-full md:w-1/2 flex flex-col gap-4">
                     <h1 class="font-bold text-2xl">About</h1>
                 
                     <p>
@@ -35,24 +35,24 @@
 
                     <table class="w-full flex flex-col gap-2">
                         <tr>
-                            <td class="font-bold w-1/4 align-top">Name</td>
+                            <td class="font-bold w-1/3 md:w-1/4 align-top">Name</td>
                             <td>Luqmanul Hakim (Luqman)</td>
                         </tr>
                         
                         <tr>
-                            <td class="font-bold w-1/4 align-top">Based In</td>
+                            <td class="font-bold w-1/3 md:w-1/4 align-top">Based In</td>
                             <td>Kuala Lumpur, Malaysia</td>
                         </tr>
                         
                         <tr>
-                            <td class="font-bold w-1/4 align-top">Occupations</td>
+                            <td class="font-bold w-1/3 md:w-1/4 align-top">Occupations</td>
                             <td class="flex flex-col gap-1">
                                 <p>Student/Prefect at SMK BUD (4)</p>
                             </td>
                         </tr>
 
                         <tr>
-                            <td class="font-bold w-1/4 align-top">Positions</td>
+                            <td class="font-bold w-1/3 md:w-1/4 align-top">Positions</td>
                             <td class="flex flex-col gap-1">
                                 <p>Chairman, SMK BUD (4) Computer Club</p>
                                 <p>Founder, ASEAN Scratchers</p>
@@ -60,7 +60,7 @@
                         </tr>
                         
                         <tr>
-                            <td class="font-bold w-1/4 align-top">Links</td>
+                            <td class="font-bold w-1/3 md:w-1/4 align-top">Links</td>
                             <td>
                                 <a href="/gh" target="_blank"
                                 class="underline hover:bg-[rgba(71,85,105,0.2)] duration-300">GitHub</a>,
@@ -79,7 +79,7 @@
                     </table>
                 </div>
 
-                <div class="w-1/2 flex flex-col gap-2">
+                <div class="w-full md:w-1/2 flex flex-col gap-2">
                     <canvas id="index-game" class="w-full aspect-square border-amber"></canvas>
 
                     <p class="text-sm">Above is a game made using HTML canvas. Enjoy!</p>
