@@ -135,10 +135,13 @@ func (h *JournalEntryHandler) JournalEntries(c echo.Context) error {
 	description, _ := metaData["description"].(string)
 	if description == "" { description = "No description was provided" }
 
+	date, _ := metaData["date"].(string)
+
 	log.Printf("[%s] GET /journal/%s", c.RealIP(), cleanSlug)
 	return c.Render(http.StatusOK, "journal-entry", map[string]any{
 		"Title":       title,
 		"Description": description,
+		"Date":		   date,
 		"Content":     contentHTML,
 		"Meta":        metaData,
 	})
