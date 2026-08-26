@@ -108,7 +108,12 @@ func (h *JournalEntryHandler) IndexJournals(journalDir string, jsonPath string) 
 		})
 	}
 
-	store := JournalDataStore{ Journals: journalEntries, }
+	// reverse the slice so newest/last items come first
+	for i, j := 0, len(journalEntries)-1; i < j; i, j = i+1, j-1 {
+		journalEntries[i], journalEntries[j] = journalEntries[j], journalEntries[i]
+	}
+
+	store := JournalDataStore{Journals: journalEntries}
 
 	output, err := json.MarshalIndent(store, "", "    ")
 	if err != nil { return fmt.Errorf("failed to marshal json: %w", err) }

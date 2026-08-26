@@ -32,8 +32,8 @@
                 {{range .Entries}}
                 <a href="{{.URL}}" class="w-fit hover:bg-[rgba(71,85,105,0.2)] duration-300">
                     <div class="flex flex-col gap-1">
-                        <div class="flex flex-row gap-4">
-                            <p>[{{.Date}}]</p>
+                        <div class="flex flex-col gap-1">
+                            <p class="text-sm">[{{.Date}}]</p>
                             <p class="font-bold underline">{{.Title}}</p>
                         </div>
     
