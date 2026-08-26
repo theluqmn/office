@@ -34,5 +34,5 @@ func main() {
 	routes.RegisterRoutes(e)
 	
 	fmt.Println("Now online")
-	e.Logger.Fatal(e.Start(":8080"))
+	e.Logger.Fatal(e.Start("0.0.0.0:8080"))
 }
