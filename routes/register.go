@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"log"
 	"main/handlers"
 	"github.com/labstack/echo/v4"
 )
@@ -26,4 +27,6 @@ func RegisterRoutes(e *echo.Echo) {
 	e.GET("/yt", LinkYouTube)
 	e.GET("/dc", LinkDiscord)
 	e.GET("/ht", LinkHackatime)
+
+	log.Println("all routes registered successfully")
 }

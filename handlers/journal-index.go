@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"os"
-
+	"log"
 	"github.com/labstack/echo/v4"
 )
 
@@ -26,6 +26,8 @@ func (h *JournalHandler) JournalIndex(c echo.Context) error {
 	if err := json.Unmarshal(fileData, &data); err != nil {
 		return c.String(http.StatusInternalServerError, "failed to parse journal data")
 	}
+
+	log.Printf("[%s] GET /journal", c.RealIP())
 
 	return c.Render(http.StatusOK, "journal-index", map[string]any{
 		"Title":       "Journal",

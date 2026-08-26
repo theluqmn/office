@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"log"
 	"net/http"
 	"github.com/labstack/echo/v4"
 )
@@ -10,6 +11,7 @@ func NewHomeHandler() *HomeHandler { return &HomeHandler{} }
 
 // handles rendering of the root page (home)
 func (h *HomeHandler) Home(c echo.Context) error {
+	log.Printf("[%s] GET /", c.RealIP())
 	return c.Render(http.StatusOK, "home", map[string]any{
 		"Title": "Home",
 		"Description": "The office in the internet, with a look inspired by amber CRT displays.",

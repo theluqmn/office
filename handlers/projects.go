@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"os"
-
+	"log"
 	"github.com/labstack/echo/v4"
 )
 
@@ -33,6 +33,7 @@ func (h *ProjectsHandler) Projects(c echo.Context) error {
 		return c.String(http.StatusInternalServerError, "failed to parse projects data")
 	}
 
+	log.Printf("[%s] GET /projects", c.RealIP())
 	return c.Render(http.StatusOK, "projects", map[string]any{
 		"Title":       "Projects",
 		"Description": "Featured projects by @theluqmn",

@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-
+	"log"
 	"github.com/labstack/echo/v4"
 	"github.com/yuin/goldmark"
 	meta "github.com/yuin/goldmark-meta"
@@ -113,6 +113,7 @@ func (h *JournalEntryHandler) IndexJournals(journalDir string, jsonPath string) 
 	output, err := json.MarshalIndent(store, "", "    ")
 	if err != nil { return fmt.Errorf("failed to marshal json: %w", err) }
 
+	log.Println("journal entries indexed successfully")
 	return os.WriteFile(jsonPath, output, 0644)
 }
 
@@ -134,6 +135,7 @@ func (h *JournalEntryHandler) JournalEntries(c echo.Context) error {
 	description, _ := metaData["description"].(string)
 	if description == "" { description = "No description was provided" }
 
+	log.Printf("[%s] GET /journal/%s", c.RealIP(), cleanSlug)
 	return c.Render(http.StatusOK, "journal-entry", map[string]any{
 		"Title":       title,
 		"Description": description,
